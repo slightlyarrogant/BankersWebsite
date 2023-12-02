@@ -1,0 +1,31 @@
+Task:
+Write a code for a simple website - called 'Bankers Website' which will have only a place to ask question. Once the question is called a separate code written by me would be called and the answer will be provided by a separate, written by me function called response which called with query will provide reply. You will display the question and the following answer. You will allow user to ask as many questions they want and keep displaying them in a chat like form. Preferably use the flask and jinja.
+
+Config:
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: False
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+website
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+4.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

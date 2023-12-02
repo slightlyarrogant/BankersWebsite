@@ -1,0 +1,11 @@
+flask
+langchain
+opencv-python-headless
+unstructured
+pdf2image
+pdfminer.six
+pandas
+unstructured_pytesseract
+unstructured_inference
+gpt4all
+chromadb

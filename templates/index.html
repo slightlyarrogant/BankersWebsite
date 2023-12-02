@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankers Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .answer {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
+        }
+        .question {
+            color: #555;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 767px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            form {
+                width: 100%;
+            }
+            input[type="text"], .answer, .question {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Bankers Website</h1>
+        <form action="/ask" method="post">
+            <input type="text" name="question" placeholder="Type your question related to McBride here...">
+            <input type="submit" value="Get Answer">
+        </form>
+        {% if question %}
+            <div class="question">
+                <strong>Question:</strong> {{ question }}
+            </div>
+            {% if answer %}
+                <div class="answer">
+                    <strong>Answer:</strong><br>{{ answer }}
+                </div>
+            {% endif %}
+        {% endif %}
+        <div class="footer">
+            <p>(c) 2023 by SinkTank</p>
+            <a href="/disclaimer">Disclaimer</a>
+        </div>
+    </div>
+</body>
+</html>
+
